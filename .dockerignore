@@ -1,0 +1,44 @@
+# .dockerignore
+
+# Git
+.git
+.gitignore
+
+# Python
+__pycache__
+*.py[cod]
+*.egg-info
+.eggs
+venv/
+.venv/
+*.egg
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# Testing
+tests/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Environment
+.env
+.env.*
+
+# Docker
+Dockerfile*
+docker-compose*
+.docker
+
+# Documentation
+docs/
+*.md
+!README.md
+
+# Misc
+Makefile
+*.log
+data/

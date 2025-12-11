@@ -1,0 +1,14 @@
+services:
+  app:
+    image: resume-matcher:latest
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=${DATABASE_URL}
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - DEBUG=false
+    restart: always
+    deploy:
+      resources:
+        limits:
+          memory: 512M
