@@ -1,13 +1,16 @@
 from pydantic_settings import BaseSettings
 from functools import lru_cache
 
+import os
+from dotenv import load_dotenv
+
 
 class Settings(BaseSettings):
     # Database
-    database_url: str = "postgresql://postgres:password@localhost:5432/resume_matcher"
+    database_url: Optional[str] = None
 
     # OpenAI
-    OPENAI_API_KEY: str = "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"
+    OPENAI_API_KEY: str
 
     # App settings
     debug: bool = False
